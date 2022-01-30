@@ -1,0 +1,10 @@
+{% extends 'classroom/index.html' %}
+{% block content %}
+<form action = "{% url 'student_entry' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="submit">add student</button>
+    <input type="hidden" name="next" value="{% url 'index' %}" />
+</form>
+<p> This is from student_entry</p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'classroom/index.html' %}
+{% block content %}
+{% for data in student%}
+<P>name : {{data.student_name}}</P>
+<p>Attendance : {{data.attendence}}</p>
+{% endfor %}
+{% endblock %}
